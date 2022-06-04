@@ -26,7 +26,7 @@ class MongoDB:
         return response
 
     def read_document(self, query):
-        result = self.mongo_collection.find(query)
+        result = self.mongo_collection.find_one(query)
         return result
 
     def delete_document(self, keys):
